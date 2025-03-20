@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Towtae The Sorcerer Adventure</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/Ling.png">
+    <link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">LingkangkuUniverse</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">หน้าหลัก</a></li>
+                        <li><a href="#เนื้อเรื่อง">เนื้อเรื่อง</a></li>
+                        <li><a href="#ภาพในเกม">ภาพในเกม</a></li>
+                        <li><a href="#ตัวอย่างเกม">ตัวอย่างเกม</a></li>
+                        <li><a href="#ดาวน์โหลดเกม">ดาวน์โหลดเกม</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero-banner">
+        <div class="containers">
+            <div class="hero-content" data-aos="fade-right">
+                <img src="img/Towtae_logo.png" alt="Cyberpunk Universe Logo" class="game-logo">
+                <div class="game-tags">
+                    <span class="game-tag">RPG</span>
+                </div>
+                <div class="game-meta">
+                    <span class="rating">9.5/10</span>
+                    <span class="year">2024</span>
+                    <span class="category">เกม AAA</span>
+                </div>
+                <p class="game-description">
+                    ในโลกที่เต็มไปด้วยอาชญการที่เป็นอสูรโต๋เต๋จึงเริ่มล้างบางพวกมัน
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" id="เนื้อเรื่อง">เกี่ยวกับเกม</h2>
+            <div class="about-game">
+                <div class="about-text" data-aos="fade-right">
+                    <h3>เนื้อเรื่อง</h3>
+                    <p>
+                        ปี 2024 โต๋เต๋นักรบอันดับ 1 ของอาณาจักรลิงที่ถูกมอบหมายให้ปกป้องหมู่บ้านจากพวกอสูรที่รุกรากมาอย่างยาวนานนับพันปี พร้อมกับสหายจากที่ต่างๆพร้อมกับเรื่องราวสุดพิสดารที่ยากจะพบเจอในชีวิตนี้
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" id="ภาพในเกม" >ภาพในเกม</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-item" data-aos="zoom-in">
+                    <img src="imggame/tsimg1.png" alt="Screenshot 1">
+                </div>
+                <div class="screenshot-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="imggame/tsimg2.png" alt="Screenshot 2">
+                </div>
+                <div class="screenshot-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="imggame/tsimg3.jpg" alt="Screenshot 3">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Video Section -->
+    <section class="content-section video-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" id="ตัวอย่างเกม">ตัวอย่างเกม</h2>
+            <div class="video-content" data-aos="fade-up">
+                <video controls width="100%">
+                    <source src="imggame/towtae_the_sorceror_adventure_trailer.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+    
+    <div class="download-section">
+        <div class="container">
+            <div class="download-container">
+                <h2 class="section-title" data-aos="fade-up" id="ดาวน์โหลดเกม">ดาวน์โหลดเกม</h2>
+                <div class="download-buttons" data-aos="fade-up">
+                    <a href="https://drive.google.com/file/d/1ZqnCJcYgiQYdSjtzPv7r4JJsrqfTE6r5/view?usp=sharing" class="download-button" id="downloadButton">
+                        <span class="download-icon">↓</span>
+                        <span class="download-text ">ดาวน์โหลด</span>
+                        <span class="download-info">ขนาด: 353 MB</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2025 LingkangkuUniverse
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                once: true,
+                duration: 800,
+                easing: 'ease-out-cubic'
+            });
+            
+            // Add scroll effect to header
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        
+        });
+
+    </script>
+</body>
+</html>

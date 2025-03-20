@@ -1,0 +1,311 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    body {
+        background-color: #0f0f1e;
+        color: #ffffff;
+        line-height: 1.6;
+        font-family: 'Kanit', sans-serif;
+    }
+
+    header {
+        background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.9) 100%);
+        padding: 15px 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        transition: background 0.3s;
+    }
+
+    header.scrolled {
+        background: rgba(10, 10, 20, 0.95);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .containers {
+        max-width: 1200px;
+        margin: 0 ;
+        padding: 0 20px;
+    }
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #00ff88;
+        text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+        color: #00ff88;
+        background-color: rgba(0, 255, 136, 0.1);
+    }
+
+    .hero-banner {
+        height: 60vh;
+        position: relative;
+        background: linear-gradient(to top, #0f0f1e, transparent 150%), 
+                    url('img/Vigilant.png') no-repeat center center/cover;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 50px;
+    }
+
+    .hero-content {
+        max-width: 150%;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+        margin-left: 0;
+    }
+
+    .novel-logo {
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .novel-tags {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    .novel-tag {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+
+    .novel-description {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .novel-meta {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+    }
+
+    .novel-meta span {
+        margin-right: 15px;
+    }
+
+    .novel-meta .rating {
+        color: #00ff88;
+        font-weight: bold;
+    }
+
+    .novel-meta .year {
+        color: #cccccc;
+    }
+
+    .novel-meta .category {
+        color: #cccccc;
+    }
+
+    /* Content Sections */
+    .content-section {
+        padding: 50px 0;
+        margin-top: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #00ff88;
+    }
+
+    /* หน้าอ่านนิยาย */
+    .novel-content {
+        background-color: #1a1a2e;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        margin-top: 50px;
+    }
+
+    .novel-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #00ff88;
+        text-align: center;
+    }
+
+    .novel-chapter {
+        font-size: 1.5rem;
+        color: #cccccc;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .novel-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #eeeeee;
+        margin-bottom: 30px;
+        text-indent: 2em;
+    }
+
+    .novel-navigation {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 30px;
+    }
+
+    .nav-button {
+        background: linear-gradient(135deg, #00a86b, #00ff88);
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 3px 10px rgba(0, 255, 136, 0.3);
+    }
+
+    .nav-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 255, 136, 0.5);
+    }
+
+    .nav-button.disabled {
+        background: #333;
+        color: #777;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+
+    .nav-button.disabled:hover {
+        transform: none;
+    }
+
+    /* เครื่องมือการอ่าน */
+    .reading-tools {
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        background: rgba(26, 26, 46, 0.8);
+        padding: 15px 10px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .tool-button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.2rem;
+        margin: 10px 0;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .tool-button:hover {
+        color: #00ff88;
+    }
+
+    /* Footer */
+    footer {
+        background: #1a1a2e;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .copyright {
+        color: #999999;
+        font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .hero-content {
+            margin-left: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-content {
+            max-width: 100%;
+        }
+        
+        .novel-logo {
+            max-width: 300px;
+        }
+        
+        .header-content {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        nav ul {
+            margin-top: 15px;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+        
+        .reading-tools {
+            display: none;
+        }
+        
+        .novel-content {
+            padding: 20px;
+        }
+    }
+
+    /* Dark Mode */
+    body.dark-mode {
+        background-color: #000;
+    }
+
+    body.dark-mode .novel-content {
+        background-color: #111;
+    }
+
+    body.dark-mode .novel-text {
+        color: #ccc;
+    }
