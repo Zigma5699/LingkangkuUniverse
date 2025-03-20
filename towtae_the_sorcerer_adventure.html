@@ -95,9 +95,9 @@
             <div class="download-container">
                 <h2 class="section-title" data-aos="fade-up" id="ดาวน์โหลดเกม">ดาวน์โหลดเกม</h2>
                 <div class="download-buttons" data-aos="fade-up">
-                    <a href="#" class="download-button" id="downloadButton">
+                    <a href="https://drive.google.com/file/d/1ZqnCJcYgiQYdSjtzPv7r4JJsrqfTE6r5/view?usp=sharing" class="download-button" id="downloadButton">
                         <span class="download-icon">↓</span>
-                        <span class="download-text">ดาวน์โหลด</span>
+                        <span class="download-text ">ดาวน์โหลด</span>
                         <span class="download-info">ขนาด: 353 MB</span>
                     </a>
                 </div>
@@ -133,32 +133,10 @@
                     header.classList.remove('scrolled');
                 }
             });
-            
-            // Add click event to video placeholder
-            const videoPlaceholder = document.querySelector('.video-placeholder');
-            if (videoPlaceholder) {
-                videoPlaceholder.addEventListener('click', function() {
-                    alert('เปิดวิดีโอตัวอย่างเกม (ในเว็บไซต์จริงจะเปิดวิดีโอ)');
-                });
-            }
+        
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-    const downloadButton = document.getElementById('downloadButton');
-    if (downloadButton) {
-        downloadButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            // สร้าง mock download สำหรับการทดสอบ
-            const link = document.createElement('a');
-            link.href = 'filegame/Towtae Adventure.rar';
-            link.download = 'filegame/Towtae Adventure.rar';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-        });
-    }
-});
     </script>
 </body>
 </html>
+
