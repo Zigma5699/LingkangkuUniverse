@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingkangkuUniverse</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/Ling.png">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">LingkangkuUniverse</div>
+                <nav>
+                    <ul>
+                        <li><a href="LingkangkuUniverse.html">หน้าหลัก</a></li>
+                        <li><a href="#story">เรื่องราวต่างๆ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+
+    <section class="hero" id="home" data-aos="fade-in" data-aos-duration="1000">
+        <div class="hero-content">
+            <h1 data-aos="zoom-in" data-aos-delay="300">LingkangkuUniverse</h1>
+            <p data-aos="fade-up" data-aos-delay="600">สำรวจโลกแห่งความบันเทิงอันบิดเบี้ยวไร้ขีดจำกัด</p>
+            <a href="#story" class="cta-button" data-aos="fade-up" data-aos-delay="900">สำรวจเลย</a>
+        </div>
+    </section>
+    
+    <section class="container" id="story">
+        <h2 class="section-title" data-aos="fade-up">เรื่องราวต่างๆ</h2>
+        <div class="game-grid">
+            <div class="game-card" data-aos="flip-left" data-aos-delay="100">
+                <img src="img/Towtae_bg.png" alt="L1" class="game-image">
+                <div class="game-info">
+                    <h3>Towtae The Sorcerer Adventure</h3>
+                    <p>ในโลกที่เต็มไปด้วยอาชญการที่เป็นอสูรโต๋เต๋จึงเริ่มล้างบางพวกมัน</p>
+                    <a href="towtae_the_sorcerer_adventure.html" class="button">รายละเอียด</a>
+                    <div class="game-meta">
+                        <span>ประเภท : เกม RPG</span>
+                        <span>Timeline : 2024</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-card" data-aos="flip-left" data-aos-delay="300">
+                <img src="img/Vigilant.png" alt="L2" class="game-image">
+                <div class="game-info">
+                    <h3>The Vigilant</h3>
+                    <p>เรื่องราวของการกำเนิดฮีโร่ที่แข็งแกร่งที่สุดในโลก</p>
+                    <a href="Vigilant_novel.html" class="button">รายละเอียด</a>
+                    <div class="game-meta">
+                        <span>ประเภท : นิยายตอนเดียวจบ</span>
+                        <span>Timeline : 2020-2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card" data-aos="flip-left" data-aos-delay="300">
+                <img src="img/coming_soon.png" alt="L3" class="game-image">
+                <div class="game-info">
+                    <h3>SHIELD GUY</h3>
+                    <p>หลังจากที่โลกใบนี้ไม่มีอสูรทำให้โลกไม่เหมือนเดิมมีกลุ่มวายร้ายเกิดขึ้นมากมาย</p>
+                    <a href="coming_soon.html" class="button">รายละเอียด</a>
+                    <div class="game-meta">
+                        <span>ประเภท : เกม RPG</span>
+                        <span>Timeline : 2025</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2025 LingkangkuUniverse
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                once: true,
+                duration: 800,
+                easing: 'ease-out-cubic'
+            });
+        });
+    </script>
+</body>
+</html>

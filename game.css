@@ -1,0 +1,354 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    body {
+        font-family: 'Kanit', sans-serif;
+        background-color: #0f0f1e;
+        color: #ffffff;
+        line-height: 1.6;
+    }
+
+    header {
+        background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.9) 100%);
+        padding: 15px 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        transition: background 0.3s;
+    }
+
+    header.scrolled {
+        background: rgba(10, 10, 20, 0.95);
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .containers {
+        max-width: 1400px;
+        margin: 0 ;
+        padding: 0 20px;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #00ff88;
+        text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+        color: #00ff88;
+        background-color: rgba(0, 255, 136, 0.1);
+    }
+
+    .hero-banner {
+        height: 80vh;
+        position: relative;
+        background: linear-gradient(to top, #0f0f1e, transparent 150%), 
+                    url('img/Towtae_bg.png') no-repeat center center/cover;
+        display: flex;
+        align-items: flex-end;
+        padding-bottom: 50px;
+    }
+
+    .hero-content {
+        max-width: 150%;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+        margin-left: 0; /* เพิ่มเพื่อให้แน่ใจว่าอยู่ชิดซ้าย */
+    }
+
+    .game-logo {
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .game-tags {
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    .game-tag {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-right: 10px;
+        font-size: 0.9rem;
+    }
+
+    .game-description {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .game-meta {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+    }
+
+    .game-meta span {
+        margin-right: 15px;
+    }
+
+    .game-meta .rating {
+        color: #00ff88;
+        font-weight: bold;
+    }
+
+    .game-meta .year {
+        color: #cccccc;
+    }
+
+    .game-meta .category {
+        color: #cccccc;
+    }
+
+    /* Content Sections */
+    .content-section {
+        padding: 50px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #00ff88;
+    }
+
+    /* Video Section */
+    .video-section {
+        background-color: #0a0a18;
+    }
+
+    .video-content {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .video-placeholder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .play-icon {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(0, 255, 136, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .play-icon:hover {
+        transform: scale(1.1);
+        background-color: rgba(0, 255, 136, 1);
+    }
+
+    .play-icon::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-left: 25px solid #000;
+        border-bottom: 15px solid transparent;
+        margin-left: 5px;
+    }
+
+    /* Screenshots Section */
+    .screenshots-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .screenshot-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+
+    .screenshot-item:hover {
+        transform: scale(1.03);
+    }
+
+    .screenshot-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* About Section */
+    .about-game {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        align-items: flex-start; /* เปลี่ยนจาก center เพื่อให้อยู่ด้านบนซ้าย */
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+        color: #dddddd;
+    }
+
+    .about-text p {
+        margin-bottom: 20px;
+    }
+
+    .about-text h3 {
+        color: #00ff88;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+        background: #1a1a2e;
+        padding: 20px 0;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .copyright {
+        color: #999999;
+        font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+        .hero-content {
+            margin-left: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-content {
+            max-width: 100%;
+        }
+        
+        .game-logo {
+            max-width: 300px;
+        }
+        
+        .header-content {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        nav ul {
+            margin-top: 15px;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+    }
+    .download-section {
+    padding: 50px 0;
+    background-color: #0a0a18;
+    }
+
+    .download-container {
+    text-align: left;
+    }
+
+    .download-buttons {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .download-button {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #00a86b, #00ff88);
+    color: #000;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
+    }
+
+    .download-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 255, 136, 0.5);
+    }
+
+    .download-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    }
+
+    .download-text {
+    font-size: 1.2rem;
+    }
+
+    .download-info {
+    margin-left: auto;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+    .download-button {
+    width: 100%;
+    max-width: none;
+    }
+    }

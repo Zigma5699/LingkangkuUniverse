@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เร็วๆ นี้</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="comingsoon.css">
+    <link rel="icon" href="img/Ling.png">
+</head>
+<body>
+   <header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">LingkangkuUniverse</div>
+            <nav>
+                <ul>
+                    <li><a href="LingkangkuUniverse.html">หน้าหลัก</a></li>
+                    <li><a href="#features">feature</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="glowing-particles" id="particles"></div>
+    <div class="hero-content">
+        <h1 data-aos="zoom-in" data-aos-duration="1200">SHIELD GUY</h1>
+        <p data-aos="fade-up" data-aos-delay="300">เกมแอ็คชั่น RPG ที่สำรวจโลกหลังการตายของราชาอสูรที่ทำให้โลกไม่เหมือนเดิม!</p>
+        
+        <div class="release-date" data-aos="fade-up" data-aos-delay="600">
+            <div class="release-date-box">
+                <div class="release-date-text">1 มิถุนายน 2025</div>
+                <div class="release-message">แล้วพบตัวอย่างได้ที่นี่เลย</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">feature</h2>
+        <div class="feature-grid">
+            <div class="feature-item" data-aos="flip-left" data-aos-delay="100">
+                <div class="feature-icon">⚔️</div>
+                <h3 class="feature-title">ระบบต่อสู้สุดล้ำ</h3>
+                <p>การต่อสู้แบบแอ็คชั่นเรียลไทม์สไตล์ RPG Maker ที่ลึกซึ้งและเหมือนเดิม</p>
+            </div>
+            
+            <div class="feature-item" data-aos="flip-left" data-aos-delay="300">
+                <div class="feature-icon">🌐</div>
+                <h3 class="feature-title">โลกเปิดกว้าง</h3>
+                <p>สำรวจโลกที่มีแต่พวกคนมีพลังพิเศษ!</p>
+            </div>
+            
+            <div class="feature-item" data-aos="flip-left" data-aos-delay="500">
+                <div class="feature-icon">🧠</div>
+                <h3 class="feature-title">ตัวละครที่หลากหลาย</h3>
+                <p>มีคนขาว คนดำ คนเอเชีย เผลอๆมีเอเลี่ยนด้วย!!!</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                &copy; 2025 LingkangkuUniverse
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                once: true,
+                duration: 800,
+                easing: 'ease-out-cubic'
+            });
+            
+            // Create particles
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 30; i++) {
+                createParticle(particlesContainer);
+            }
+        });
+        
+        // Function to create particle
+        function createParticle(container) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            // Random size
+            const size = Math.random() * 15 + 5;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            // Random position
+            const posX = Math.random() * window.innerWidth;
+            const posY = Math.random() * window.innerHeight + window.innerHeight;
+            particle.style.left = `${posX}px`;
+            particle.style.top = `${posY}px`;
+            
+            // Random animation duration
+            const duration = Math.random() * 15 + 10;
+            particle.style.animationDuration = `${duration}s`;
+            
+            // Random delay
+            const delay = Math.random() * 5;
+            particle.style.animationDelay = `${delay}s`;
+            
+            container.appendChild(particle);
+            
+            // Remove and recreate after animation completes
+            setTimeout(() => {
+                particle.remove();
+                createParticle(container);
+            }, (duration + delay) * 1000);
+        }
+        
+    </script>
+</body>
+</html>
